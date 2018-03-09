@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>-->
+    <title>Title</title>
+</head>
+<body>
+ <textarea name="" id="mytextarea" cols="30" rows="10"></textarea>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.js"></script>
+<script src="tinymce/tinymce.min.js"></script>
+
+<script>
+    //tinymce.init({
+            //selector: '#mytextarea',
+            //height:500,
+            //主题
+        //    theme:'modern',
+       //     //菜单栏
+       //     menubar:false,
+            //为图像和链接的url转换出不同的结果
+        //    convert_urls:false,
+            //添加插件(其中imageupload需要自己下载插件，不是自带的插件)
+       //     plugins:[
+       //         'advlist anchor autolink lists link image charmap print preview hr pagebreak',
+       //         'searchreplace wordcount visualblocks visualchars code fullscreen',
+       //         'insertdatetime media nonbreaking save table contextmenu directionality',
+        //        'emoticons template paste textcolor colorpicker textpattern imagetools imageupload'
+       //     ],
+            //工具栏的各种配置
+      //      toolbar:"code | undo redo |removeformat styleselect | bold italic |alignleft aligncenter alignright alignjustify | imageupload | forecolor backcolor fontsizeselect",
+            //字体大小版本
+       //     fontsize_formats:"8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+            //图片上传的地址(接口)
+      //      imageupload_url:'www.baidu.com',
+        ///    image_advtab:true,
+      //      paste_auto_cleanup_on_paste : false,
+         //   paste_remove_styles: false,
+        //    paste_remove_styles_if_webkit: false,
+         //   paste_strip_class_attributes: false,
+            //语言
+        //    language:'zh_CN'
+
+       // });
+     tinymce.init({
+            selector: '#mytextarea',
+           convert_urls: false,
+            height: 500,
+            menubar: false,
+            theme: 'modern',
+            plugins: [
+               'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+               'insertdatetime media nonbreaking save table contextmenu directionality',
+               'emoticons template paste textcolor colorpicker textpattern imagetools imageupload'
+            ],
+            toolbar: 'code | undo redo | removeformat styleselect | bold italic | alignleft aligncenter alignright alignjustify | imageupload | forecolor backcolor fontsizeselect',
+            fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+            imageupload_url: '/product/api/upload',
+            image_advtab: true,
+            paste_auto_cleanup_on_paste : false,
+            paste_remove_styles: false,
+            paste_remove_styles_if_webkit: false,
+            paste_strip_class_attributes: false,
+            language: 'zh_CN'
+        });
+
+</script>
+
